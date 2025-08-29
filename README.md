@@ -1,1 +1,3 @@
 # proje
+## Projemin fikri:
+> 
