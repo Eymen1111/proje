@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Fotoğraf Algılama</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Yapay Zekamı Gerçek mi?</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="file-upload" class="custom-file-upload">
+         Fotoğraf Seç
+      </label>
+      <input id="file-upload" type="file" name="file" accept="image/jpeg">
+      <br>
+      <input type="submit" value="Analiz Et">
+    </form>
+  </div>
+</body>
+</html>
