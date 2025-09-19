@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kodland</title>
+  <style>
+    body {
+    /* Yazı tipi ve hizalama ayarları */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Arka plan için yumuşak bir renk geçişi */
+    background: #5d00ff;
+    color: #333;
+}
+
+h1 {
+    /* Başlık için belirgin bir görünüm */
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+    /* Düğmeler için şık bir tasarım */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Düğme arka planları için farklı renk geçişleri */
+}
+
+button:nth-of-type(1) {
+    /* İlk düğme için mor-pembe renk geçişi */
+    background:rgb(95, 8, 8);
+    box-shadow: 0 4px 15px rgba(164, 80, 139, 0.4);
+}
+
+button:nth-of-type(2) {
+    /* İkinci düğme için mavi-yeşil renk geçişi */
+    background: linear-gradient(45deg, #1fa2ff, #12d8fa, #a6ffcb);
+    box-shadow: 0 4px 15px rgba(31, 162, 255, 0.4);
+}
+
+button:hover {
+    /* Fare üzerine geldiğinde hafif büyüme ve gölge artışı */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Sayfa içeriğini ortalamak için form etiketlerine esneklik ekleme */
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+  <h1>Gerçek mi Yapay mı? Nesne ve Görüntü Analizi</h1>
+
+  <form action="/sayfa1" method="get">
+    <button type="submit">Yapay mı Gerçek mi</button>
+  </form>
+
+  <form action="/sayfa2" method="get">
+    <button type="submit">Nesne Tespiti(Yolov3)</button>
+  </form>
+  <form action="/sayfa3" method="get">
+    <button type="submit">Arka Plan Değiştirme</button>
+  </form>
+</body>
+</html>
