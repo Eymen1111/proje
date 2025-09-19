@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arka Plan Değiştirme</title>
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .container {
+          background: #fff;
+          padding: 40px;
+          border-radius: 16px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+          width: 400px;
+          animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+          margin-bottom: 25px;
+          font-size: 22px;
+          color: #333;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        /* Orijinal input gizleniyor */
+        input[type="file"] {
+          display: none;
+        }
+
+        /* Özel dosya seçme butonu */
+        .custom-file-upload {
+          display: inline-block;
+          padding: 12px 20px;
+          cursor: pointer;
+          border-radius: 10px;
+          background: #5a67d8;
+          color: white;
+          font-weight: 600;
+          transition: transform 0.2s, background 0.3s ease;
+          margin-top: 10px;
+        }
+
+        .custom-file-upload:hover {
+          transform: scale(1.05);
+          background: rgb(165, 33, 33);
+        }
+
+        /* Gönderme butonu */
+        input[type="submit"] {
+          margin-top: 20px;
+          width: 100%;
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          color: white;
+          border: none;
+          padding: 12px 25px;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: transform 0.2s, background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+          transform: scale(1.05);
+          background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Form içindeki label düzenlemesi */
+        form p {
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: 500;
+          color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Arka Plan Değiştirme</h2>
+        <form action="{{ url_for('change_background_route') }}" method="post" enctype="multipart/form-data">
+            
+            <p>
+                <label for="image_file">Arka Planı Değiştirilecek Resim:</label>
+                <label for="image_file" class="custom-file-upload">Dosya Seç</label>
+                <input type="file" name="image_file" id="image_file" accept="image/*" required>
+            </p>
+            
+            <p>
+                <label for="background_file">Yeni Arka Plan Resmi:</label>
+                <label for="background_file" class="custom-file-upload">Dosya Seç</label>
+                <input type="file" name="background_file" id="background_file" accept="image/*" required>
+            </p>
+            
+            <p>
+                <input type="submit" value="Arka Planı Değiştir">
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>
