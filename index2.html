@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOLOv3 Video İşleme</title>
+<link rel="stylesheet" href="static/style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Yükle ve İşle</h1>
+        <h2>(İşleme Süresi Video Süresine Göre Değişebilir)</h2>
+        <form action="/process_video" method="POST" enctype="multipart/form-data">
+            <p>Dosyanızı Seçin!</p>
+            <input type="file" name="file" id="file-upload" accept=".mp4">
+            <label for="file-upload">Dosya Seç</label>
+            <input type="submit" value="Videoyu İşle">
+        </form>
+    </div>
+</body>
+</html>
